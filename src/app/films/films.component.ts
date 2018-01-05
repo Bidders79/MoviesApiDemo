@@ -7,8 +7,9 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-movies',
   templateUrl: './films.component.html',
   styles: [`
-    .film-dates{float:right; margin-bottom: 50px;}
-    .film-block {padding:20px;}
+    .film-dates{ float:right; margin-bottom: 50px; }
+    .film-block { padding:20px; }
+    .director-producers strong {padding-right:50px;}
   `]
 })
 export class FilmsComponent implements OnInit{
@@ -31,7 +32,6 @@ export class FilmsComponent implements OnInit{
       //the property films is populated with data by a resolver service
       this.filmsList = this.route.snapshot.data['films'] as IFilmsModel[];
     }
-
 }
 
 

@@ -5,12 +5,15 @@
         <div>
             <h1>{{film.title}}</h1>
             <span>
-                <strong>{{film.director}}</strong> <br/>
-                <strong>{{film.producer}}</strong>
                 <div class="film-dates">
                     <strong>Created Date:</strong>{{film.created  | date: "MM/dd/yy"}}<br/>
                     <strong>Release Date:</strong>{{film.release_date | date: "MM/dd/yy"}}<br/>
                 </div>
+                <div class="director-producers">
+                    <strong>{{film.director}}</strong> <br/>
+                    <strong>{{film.producer}}</strong>
+                </div>
+
             </span>
             </div>
             <br/>
