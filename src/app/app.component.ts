@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FilmsComponent }from './films/films.component'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-root',
