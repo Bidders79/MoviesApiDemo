@@ -12,6 +12,6 @@ export const appRoutes: Routes = [
     */
     { path: 'films', component: FilmsComponent, resolve: {films: FilmsListResolver}},
     { path: 'people', component: PeopleComponent },
-    { path: 'people/id', component: PeopleComponent },
+    { path: 'people:id', component: PeopleComponent },
     { path: '', redirectTo: '/films', pathMatch: 'full'},
 ];
