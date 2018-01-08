@@ -12,24 +12,25 @@ import { ActivatedRoute } from '@angular/router';
     .director-producers strong {padding-right:50px;}
   `]
 })
-export class FilmsComponent implements OnInit{
-  
-  
+// tslint:disable-next-line:one-line
+export class FilmsComponent implements OnInit {
+
+
   filmsList: IFilmsModel[];
- 
+
   //inject the api service handler
-  constructor(private apiService: ApiService, private route:ActivatedRoute) { 
-  } 
+  constructor(private apiService: ApiService, private route: ActivatedRoute) {
+  }
 
   //lifestyle hook
     ngOnInit(){
-      //basically this is receiving films in and returning a list of films out
+      // basically this is receiving films in and returning a list of films out
         // this.apiService.getFilms().subscribe(films => {
         //   this.filmsList = films;
         // });
-      
-      //the data is now recieved from the route handler resolver method, 
-      //the property films is populated with data by a resolver service
+
+      // the data is now recieved from the route handler resolver method,
+      // the property films is populated with data by a resolver service
       this.filmsList = this.route.snapshot.data['films'] as IFilmsModel[];
     }
 }

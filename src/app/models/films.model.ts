@@ -5,11 +5,11 @@ export interface IFilmsModel{
     director: string;
     producer: string;
     release_date: string;
-    characters: string[];            
+    characters: string[];
     planets: string[];
-    starships: string[];       
+    starships: string[];
     vehicles: string[];
-    species: string[];            
+    species: string[];
     created: string;
     edited: string;
     url: string;

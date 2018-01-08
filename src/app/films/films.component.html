@@ -13,11 +13,21 @@
                     <strong>{{film.director}}</strong> <br/>
                     <strong>{{film.producer}}</strong>
                 </div>
-
             </span>
-            </div>
-            <br/>
-            <div>{{film.opening_crawl}}</div>
+        </div>
+        <collapsibleCharacters [title]='Yes'>
+            
+            <div>This is a reusable component</div>
+                    <div section-title>
+                        <a>Film Characters</a>
+                    </div>
+                               
+                        <div section-body *ngFor='let char of film.characters'>
+                           <a href='/people?id={{char |FormatUrl}}'>{{char}}</a>
+                        </div>
+                   
+        </collapsibleCharacters>
+        <br/>
+        <div>{{film.opening_crawl}}</div>
     </div>
 </div>
-
